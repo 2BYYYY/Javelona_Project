@@ -5,4 +5,4 @@
     @yield('content')
 </main>
 
-@include('include.footer')
+@include('layouts.footer')
