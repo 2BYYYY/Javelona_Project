@@ -1,7 +1,7 @@
 <?php
 
 use Illuminate\Support\Facades\Route;
-
+use App\Http\Controllers\SkillControler;
 /*
 |--------------------------------------------------------------------------
 | Web Routes
@@ -13,7 +13,8 @@ use Illuminate\Support\Facades\Route;
 |
 */
 
-Route::get('/', fn () => view('home'));
+Route::get('/', [SkillControler::class, 'index']);
+// Route::get('/', fn () => view('home'));
 Route::get('/about', fn () => view('about'));
 Route::get('/projects', fn () => view('projects'));
 Route::get('/contacts', fn () => view('contacts'));
