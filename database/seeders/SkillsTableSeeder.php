@@ -13,10 +13,10 @@ class SkillsTableSeeder extends Seeder
      */
     public function run(): void
     {
-        DB.table('skills')->insert([
-            ['skill' => 'HTML'],
-            ['skill' => 'CSS'],
-            ['skill' => 'JS']
+        DB::table('skills')->insert([
+            ['skill' => 'HTML', 'level' => 'inter'],
+            ['skill' => 'CSS', 'level' => 'inter'],
+            ['skill' => 'JS', 'level' => 'inter'],
         ]);
     }
 }
