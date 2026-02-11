@@ -1,13 +1,13 @@
 @extends('layouts.content')
 
-@section('title', 'home')
+@section('title', 'Home')
 
 @section('layouts.content')
 
 <h1>Welcome</h1>
 
 <div class="container mt-4">
-    <h2>My Skills</h2>
+    <!-- <h2>My Skills</h2>
     <table class="table table-bordered">
         <thread>
             <tr>
@@ -23,5 +23,8 @@
                 </tr>
             @endforeach
         </tbody>
-    </table>
+    </table> -->
 </div>
+
+
+<!-- mirations, seeders, pages, models, controllers -->
