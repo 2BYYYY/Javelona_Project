@@ -6,8 +6,7 @@ use Illuminate\Http\Request;
 use App\Models\Skill; //THIS IS FOR THE MODEL FOR THE MIGRATION AND THE SEEDERS
 
 class HomeController extends Controller {
-    public function index(){
-        $skills = Skill::all();
-        return view('pages.skills', compact('skills'));
+    public function home(){
+        return(view('pages.home'));
     }
 }
