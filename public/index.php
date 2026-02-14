@@ -3,6 +3,10 @@
 use Illuminate\Contracts\Http\Kernel;
 use Illuminate\Http\Request;
 
+/*
+    Laravel uses this to measure how long the request takes (for debugging, profiling, or performance logging).
+*/
+
 define('LARAVEL_START', microtime(true));
 
 /*
@@ -17,6 +21,9 @@ define('LARAVEL_START', microtime(true));
 */
 
 if (file_exists($maintenance = __DIR__.'/../storage/framework/maintenance.php')) {
+    /*
+        Instead of starting the full app, it loads a simple maintenance page so users see a friendly message. 
+    */
     require $maintenance;
 }
 
@@ -30,7 +37,7 @@ if (file_exists($maintenance = __DIR__.'/../storage/framework/maintenance.php'))
 | into the script here so we don't need to manually load our classes.
 |
 */
-
+/* You do not need to require the files*/
 require __DIR__.'/../vendor/autoload.php';
 
 /*
@@ -44,12 +51,17 @@ require __DIR__.'/../vendor/autoload.php';
 |
 */
 
+/*Loads configuration, environment variables (.env), service providers, and sets up the service container.*/
 $app = require_once __DIR__.'/../bootstrap/app.php';
 
+
+/*$kernel now holds the HTTP kernel object which will process the incoming request*/
 $kernel = $app->make(Kernel::class);
 
+/*Process the request, run all logic, and send back the response*/
 $response = $kernel->handle(
     $request = Request::capture()
 )->send();
 
+/*all the cleanup or background tasks after the page has been sent.*/
 $kernel->terminate($request, $response);
