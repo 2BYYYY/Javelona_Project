@@ -1,5 +1,5 @@
 @extends('app')
 
 @section('content')
-    <h1>project section</h1>
+    <h1>contact section</h1>
 @endsection
