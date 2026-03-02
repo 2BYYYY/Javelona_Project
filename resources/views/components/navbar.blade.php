@@ -1,6 +1,6 @@
 <div class='container-fluid d-flex justify-content-between align-items-center mt-5 mb-5 px-custom'>
     <div>
-        <button class='btn profile-page-btn-hamburger collapsed' type='button' data-bs-toggle='collapse' data-bs-target='#menu'></button>
+        <button class='btn navbar-btn collapsed' type='button' data-bs-toggle='collapse' data-bs-target='#menu'></button>
             <!-- Collapsible menu -->
         <div class='collapse position-absolute' id='menu'>
             <a class='d-block mb-1' href='/'>Profile</a>
