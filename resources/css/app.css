@@ -1,0 +1,134 @@
+@import "bootstrap/dist/css/bootstrap.min.css";
+
+body {
+    font-family: "Montserrat Alternates", sans-serif;
+}
+
+footer h4{
+  font-size: clamp(0.7rem, 1vw, 3rem);
+}
+
+.px-custom {
+  padding-left: 2rem;  
+  padding-right: 2rem;
+}
+
+.responsive-img-contain{
+  object-fit: contain;
+  width: 100%;
+}
+
+.responsive-img-cover{
+  object-fit: cover;
+  width: 100%;
+}
+
+.big-text{
+  font-size: clamp(2rem, 5vw, 10rem);
+}
+
+.medium-text{
+  font-size: clamp(1.5rem, 2vw, 4rem);
+}
+
+.small-text{
+  font-size: clamp(1rem, 1.5vw, 3rem);
+}
+
+
+/* NAV BAR  */
+.navbar-btn{
+  font-size: 3rem;
+  border: none;
+  background: none;
+  cursor: pointer;
+  padding: 0;
+}
+
+.navbar-btn::before{
+  content: "☰";
+}
+
+/* checks if the button has .collapsed */
+.navbar-btn:not(.collapsed)::before {
+  content: "X";
+}
+
+#menu {
+  background-color: rgba(255, 255, 255, 0);
+  backdrop-filter: blur(10px);
+  padding: 1.5rem;
+}
+
+#menu a {
+  color: black;
+  text-decoration: none;
+  font-size: 2rem;
+}
+
+#menu a:hover {
+  color: green;
+}
+
+
+/* PROFILE PAGE  */
+.profile-section1-h1{
+  /* sets a value that scales with the viewport but stays between a min and max  */
+  font-size: clamp(1rem, 7vw, 20rem);
+}
+
+.profile-section1-img {
+  height: clamp(200px, 50vw, 800px);
+  width: clamp(200px, 70vw, 1200px);
+  object-fit: cover;
+  border-radius: 5rem;
+  border-top-left-radius: 0;
+  border-top-right-radius: 0;
+}
+
+.profile-section2-img,
+.profile-section3-img {
+  max-height: 5rem;
+}
+
+.profile-section4-img {
+  max-height: 3rem;
+}
+
+
+/* PROJECT PAGE  */
+#project-section1 img{
+  height: clamp(10px, 50vw, 800px);
+}
+
+#project-section1 h1{
+  font-size: clamp(1rem, 5vw, 20rem);
+}
+
+#project-section1 h4{
+  font-size: clamp(1rem, 3vw, 20rem);
+}
+
+#project-section1-github{
+  max-height: 100px;
+}
+
+/* MEDIA QUERY */
+@media (min-width: 992px){
+  .px-custom {
+    padding-left: 9rem;  
+    padding-right: 9rem;
+  }
+  .profile-section1-img {
+    height: clamp(200px, 30vw, 800px);
+    width: clamp(200px, 30vw, 800px);
+    object-fit: cover;
+    border-radius: 5rem;
+    border-top-left-radius: 0;
+    border-bottom-left-radius: 0;
+  }
+  .profile-section1-h1{
+    font-size: clamp(1rem, 5.5vw, 20rem);
+  }
+}
+

@@ -3,11 +3,18 @@
 namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
-use App\Models\Skill; //THIS IS FOR THE MODEL FOR THE MIGRATION AND THE SEEDERS
+use App\Models\Experience; 
 
-class ExperienceController extends Controller {
-    public function index(){
-        $skills = Skill::all();
-        return view('pages.skills', compact('skills'));
+class ExperienceController extends Controller
+{
+    public function experience()
+    {
+        $experienceTable = Experience::all();
+        return(
+            view('pages.experience',[
+                'experienceTable' => $experienceTable
+            ])
+        );
+
     }
 }

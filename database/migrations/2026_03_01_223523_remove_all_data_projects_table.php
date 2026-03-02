@@ -1,17 +1,24 @@
 <?php
 
-namespace Database\Seeders;
-
-use Illuminate\Database\Console\Seeds\WithoutModelEvents;
-use Illuminate\Database\Seeder;
+use Illuminate\Database\Migrations\Migration;
+use Illuminate\Database\Schema\Blueprint;
+use Illuminate\Support\Facades\Schema;
 use Illuminate\Support\Facades\DB;
 
-class ProjectSeeder extends Seeder
+return new class extends Migration
 {
     /**
-     * Run the database seeds.
+     * Run the migrations.
      */
-    public function run(): void
+    public function up(): void
+    {
+        DB::table('projects')->truncate();
+    }
+
+    /**
+     * Reverse the migrations.
+     */
+    public function down(): void
     {
         DB::table('projects')->insert([
             [
@@ -47,4 +54,4 @@ class ProjectSeeder extends Seeder
             ]
         ]);
     }
-}
+};
