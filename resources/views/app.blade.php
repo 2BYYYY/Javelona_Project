@@ -1,19 +1,19 @@
 <!DOCTYPE html>
 <html lang="en">
     <head>
-        @include('layouts.header')
+        @include('components.header')
     </head>
     <body>
 
         {{-- Navbar --}}
-        @include('layouts.navbar')
+        @include('components.navbar')
 
         {{-- Content --}}
         <main>
-            @yield('content[body]')
+            @yield('content')
         </main>
 
         {{-- Footer --}}
-        @include('layouts.footer')
+        @include('components.footer')
     </body>
 </html>

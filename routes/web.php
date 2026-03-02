@@ -1,10 +1,11 @@
 <?php
 
 use Illuminate\Support\Facades\Route;
-use App\Http\Controllers\SkillControler;
-use App\Http\Controllers\HomeController;
+use App\Http\Controllers\ProfileController;
+use App\Http\Controllers\SkillController;
 use App\Http\Controllers\ProjectController;
 use App\Http\Controllers\ExperienceController;
+use App\Http\Controllers\ContactController;
 /*
 |--------------------------------------------------------------------------
 | Web Routes
@@ -16,5 +17,9 @@ use App\Http\Controllers\ExperienceController;
 |
 */
 
-Route::get('/', [HomeController::class, 'home']);
+Route::get('/', [ProfileController::class, 'profile']);
+Route::get('/skills', [SkillController::class, 'skill']);
+Route::get('/projects', [ProjectController::class, 'project']);
+Route::get('/experience', [ExperienceController::class, 'experience']);
+Route::get('/contact', [ContactController::class, 'contact']);
 
