@@ -13,7 +13,7 @@ class ProfileController extends Controller
 {
     public function profile(){
         $profileTable = Profile::findOrFail(1);
-        $skillTable = Skill::whereIn('skill', ['Python','Javascript','React','Laravel','Postgresql'])->get()->keyBy('skill');
+        $skillTable = Skill::whereIn('skill', ['Python','Javascript','React','Laravel','Postgresql'])->orderBY('skill', 'desc')->get();
         $projectTable = Project::all();
         $experienceTable = Experience::all();
         $contactTable = Contact::findOrFail(1);;
