@@ -1,5 +1,7 @@
 @extends('app')
 
 @section('content')
-    <h1>contact section</h1>
+    <div class="container-fluid px-custom">
+        @include('pages.contact.section1')
+    </div>
 @endsection

@@ -1,40 +1,35 @@
 @import "bootstrap/dist/css/bootstrap.min.css";
 
 body {
-    font-family: "Montserrat Alternates", sans-serif;
+  font-family: "Montserrat Alternates", sans-serif;
 }
-
 footer h4{
   font-size: clamp(0.7rem, 1vw, 3rem);
 }
-
 .px-custom {
   padding-left: 2rem;  
   padding-right: 2rem;
 }
-
 .responsive-img-contain{
   object-fit: contain;
   width: 100%;
 }
-
 .responsive-img-cover{
   object-fit: cover;
   width: 100%;
 }
-
-.big-text{
-  font-size: clamp(2rem, 5vw, 10rem);
+.big-text {
+  font-size: clamp(2.5rem, 6vw, 4rem);
 }
-
-.medium-text{
-  font-size: clamp(1.5rem, 2vw, 4rem);
+.large-text {
+  font-size: clamp(2rem, 5vw, 3rem);
 }
-
-.small-text{
-  font-size: clamp(1rem, 1.5vw, 3rem);
+.medium-text {
+  font-size: clamp(1.5rem, 3.5vw, 2.2rem);
 }
-
+.small-text {
+  font-size: clamp(1.2rem, 2.5vw, 1.6rem);
+}
 
 /* NAV BAR  */
 .navbar-btn{
@@ -44,39 +39,31 @@ footer h4{
   cursor: pointer;
   padding: 0;
 }
-
 .navbar-btn::before{
   content: "☰";
 }
-
 /* checks if the button has .collapsed */
 .navbar-btn:not(.collapsed)::before {
   content: "X";
 }
-
 #menu {
-  background-color: rgba(255, 255, 255, 0);
-  backdrop-filter: blur(10px);
+  background-color: rgb(255, 255, 255);
   padding: 1.5rem;
 }
-
 #menu a {
   color: black;
   text-decoration: none;
   font-size: 2rem;
 }
-
 #menu a:hover {
-  color: green;
+  color: rgb(174, 174, 174);
 }
-
 
 /* PROFILE PAGE  */
 .profile-section1-h1{
   /* sets a value that scales with the viewport but stays between a min and max  */
   font-size: clamp(1rem, 7vw, 20rem);
 }
-
 .profile-section1-img {
   height: clamp(200px, 50vw, 800px);
   width: clamp(200px, 70vw, 1200px);
@@ -85,40 +72,51 @@ footer h4{
   border-top-left-radius: 0;
   border-top-right-radius: 0;
 }
-
 .profile-section2-img,
 .profile-section3-img {
   max-height: 5rem;
 }
-
 .profile-section4-img {
   max-height: 3rem;
 }
 
-
 /* PROJECT PAGE  */
-#project-section1 img{
-  height: clamp(10px, 50vw, 800px);
+.project-section1-img{
+  min-height: 15rem;
+}
+.project-section1-img-github{
+  max-height: 3rem;
 }
 
-#project-section1 h1{
-  font-size: clamp(1rem, 5vw, 20rem);
+/* EXPERIENCE PAGE  */
+.experience-section1-img {
+  min-height: 15rem;
 }
 
-#project-section1 h4{
-  font-size: clamp(1rem, 3vw, 20rem);
-}
-
-#project-section1-github{
-  max-height: 100px;
+/* CONTACT PAGE  */
+.contact-section1-img{
+  height: clamp(800px, 30vw, 900px);
 }
 
 /* MEDIA QUERY */
 @media (min-width: 992px){
+  .big-text-lg{
+    font-size: clamp(2rem, 4vw, 4rem);
+  }
+  .large-text-lg{
+    font-size: clamp(1.75rem, 3vw, 3rem);
+  }
+  .medium-text-lg{
+    font-size: clamp(1.25rem, 2vw, 2rem);
+  }
+  .small-text-lg{
+    font-size: clamp(1rem, 1.2vw, 1.5rem);
+  }
   .px-custom {
     padding-left: 9rem;  
     padding-right: 9rem;
   }
+  /* PROFILE PAGE */
   .profile-section1-img {
     height: clamp(200px, 30vw, 800px);
     width: clamp(200px, 30vw, 800px);
@@ -130,5 +128,15 @@ footer h4{
   .profile-section1-h1{
     font-size: clamp(1rem, 5.5vw, 20rem);
   }
+
+  /* PROJECT PAGE */
+  .project-section1-img{
+    height: clamp(800px, 30vw, 900px);
+  }
+  /* EXPERIENCE PAGE  */
+  .experience-section1-img {
+    height: clamp(500px, 30vw, 900px);
+  }
+
 }
 

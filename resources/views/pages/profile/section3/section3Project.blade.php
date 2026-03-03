@@ -1,4 +1,4 @@
-<h1 class="mt-5 mb-3 medium-text fw-bold">Projects</h1>
+<h1 class="mt-5 mb-3 large-text-lg large-text fw-bold">Projects</h1>
 <div class="row">
     <div class="col">
         @foreach ( $projectTable as $pt )

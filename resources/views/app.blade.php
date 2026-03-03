@@ -3,13 +3,13 @@
     <head>
         @include('components.header')
     </head>
-    <body>
+    <body class="d-flex flex-column min-vh-100">
 
         {{-- Navbar --}}
         @include('components.navbar')
 
         {{-- Content --}}
-        <main>
+        <main class="flex-fill">
             @yield('content')
         </main>
 
