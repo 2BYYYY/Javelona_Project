@@ -8,7 +8,7 @@
             <a class='d-block mb-1' href='/projects'>Projects</a>
             <a class='d-block mb-1' href='/experience'>Experience</a>
             <a class='d-block mb-1' href='/contact'>Contact</a>
+            <a class='d-block mb-1' href='/passwords'>Super Important Passwords</a>
         </div>
     </div>
-    <button class='btn'>Exit</button>
 </div>
