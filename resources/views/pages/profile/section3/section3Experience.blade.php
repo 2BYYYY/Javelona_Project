@@ -1,4 +1,4 @@
-<h1 class="mt-5 mb-3 large-text-lg fw-bold">Experience</h1>
+<h1 class="mt-5 mb-3 large-text-lg fw-bold">{{ $randomdataTable['section3-3']->content }}</h1>
 <div class="row">
     <div class="col">
         @foreach ( $experienceTable as $et )

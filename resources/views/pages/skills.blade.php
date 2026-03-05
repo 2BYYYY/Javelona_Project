@@ -1,5 +1,7 @@
 @extends('app')
 
 @section('content')
-    <h1>skill section</h1>
+    <div class="container-fluid px-custom">
+        @include('pages.skill.section1')
+    </div>
 @endsection

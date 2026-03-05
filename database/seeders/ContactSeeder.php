@@ -14,11 +14,10 @@ class ContactSeeder extends Seeder
     public function run(): void
     {
         DB::table('contact')->insert([
-            'introduction'=>'Connect with me!',
-            'github'=>'https://github.com/2BYYYY',
-            'gmail'=>'iwbjavelona@gmail.com',
-            'linkedin'=>'https://www.linkedin.com/in/ignatius-warren-benjamin-javelona-bab7272a4/',
-
+            ['platform'=>'linkdin','link'=>'https://www.linkedin.com/in/ignatius-warren-benjamin-javelona-bab7272a4/'],
+            ['platform'=>'github','link'=>'https://github.com/2BYYYY'],
+            ['platform'=>'gmail','link'=>'iwbjavelona@gmail.com'],
+            ['platform'=>'facebook','link'=>'https://www.facebook.com/TTOO33YY/'],
         ]);
     }
 }

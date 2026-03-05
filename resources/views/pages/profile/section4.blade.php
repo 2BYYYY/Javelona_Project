@@ -1,11 +1,10 @@
 <div class="row mt-5 text-center">
-    <h1 class="large-text-lg fw-bold">Socials</h1>
+    <h1 class="large-text-lg fw-bold">{{ $randomdataTable['section4-1']->content }}</h1>
     <div class="col mt-3 mb-5 d-flex text-align-center justify-content-center gap-3">
-        <a href="{{ $contactTable->github }}" target="_blank">
-            <img class="responsive-img-contain profile-section4-img" src="{{ asset('images/GithubLogo.png') }}" alt="github button">
-        </a>
-        <a href="{{ $contactTable->linkedin }}" target="_blank">
-            <img class="responsive-img-contain profile-section4-img" src="{{ asset('images/LinkedinLogo.png') }}" alt="linkedin button">
-        </a>
+        @foreach ( $contactTable as $ct )
+            <a href="{{ $ct->link }}" target="_blank">
+                <img class="rounded-circle responsive-img-contain profile-section4-img" src="{{ asset('images/'.$ct->platform.'.png') }}" alt="{{ $ct->platform }}">
+            </a>
+        @endforeach
     </div>
 </div>
