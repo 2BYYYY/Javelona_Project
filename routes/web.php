@@ -17,9 +17,20 @@ use App\Http\Controllers\ContactController;
 |
 */
 
-Route::get('/', [ProfileController::class, 'profile']);
-Route::get('/skills', [SkillController::class, 'skill']);
-Route::get('/projects', [ProjectController::class, 'project']);
-Route::get('/experience', [ExperienceController::class, 'experience']);
-Route::get('/contact', [ContactController::class, 'contact']);
+Route::get('/', [ProfileController::class, 'profile'])->name('profile');
 
+Route::middleware('pageAccess')->group(function () {
+    Route::get('/skills', [SkillController::class, 'skill'])->name('skill');
+    Route::get('/projects', [ProjectController::class, 'project'])->name('project');
+    Route::get('/experience', [ExperienceController::class, 'experience'])->name('experience');
+    Route::get('/contact', [ContactController::class, 'contact'])->name('contact');
+    Route::get('/passwords', [ContactController::class, 'contact'])->name('passwords');
+});
+
+Route::get('/linkedin-redirect', function () {
+
+    session(['linkedin_clicked' => true]);
+    session()->put('linkedin_clicked_expires', now()->addMinutes(1));
+    return redirect('https://www.linkedin.com/in/ignatius-warren-benjamin-javelona-bab7272a4/');
+
+})->name('linkedinClicked');

@@ -26,6 +26,8 @@ class RandomdataSeeder extends Seeder
                 ['page'=>'profile','section'=>'section3-2','content'=>'Projects'],
                 ['page'=>'profile','section'=>'section3-3','content'=>'Experience'],
                 ['page'=>'profile','section'=>'section4-1','content'=>'Socials'],
+                ['page'=>'profile','section'=>'section0','content'=>'You need to check out my LinkedIn first! (every 1 min)'],
+                ['page'=>'profile','section'=>'section2','content'=>'ABOUT ME'],
             ]);
         */
     }
