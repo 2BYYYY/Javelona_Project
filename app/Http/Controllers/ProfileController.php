@@ -13,7 +13,7 @@ use App\Models\Randomdata;
 class ProfileController extends Controller
 {
     public function profile(){
-        $randomdataTable = Randomdata::whereIn('section',['global','section3-1','section3-2','section3-3','section4-1'])->get()->keyBy('section');
+        $randomdataTable = Randomdata::whereIn('section',['global','section3-1','section3-2','section3-3','section4-1','section2'])->get()->keyBy('section');
         $profileTable = Profile::findOrFail(1);
         $skillTable = Skill::whereIn('skill', ['Python','Javascript','React','Laravel','Postgresql'])->orderBY('skill', 'desc')->get();
         $projectTable = Project::all();
