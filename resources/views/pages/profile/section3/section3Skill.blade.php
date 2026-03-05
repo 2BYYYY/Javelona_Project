@@ -1,4 +1,4 @@
-<h1 class="mt-5 mb-3 large-text-lg large-text fw-bold">Skills</h1>
+<h1 class="mt-5 mb-3 large-text-lg large-text fw-bold">{{ $randomdataTable['section3-1']->content }}</h1>
 <div class="row text-center">
     @foreach( $skillTable as $st)
         {{-- caution this is based on the order of data, first one returned is the bottom one with col-12 --}}

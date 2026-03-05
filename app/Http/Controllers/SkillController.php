@@ -9,7 +9,7 @@ class SkillController extends Controller
 {
     public function skill()
     {
-        $skillTable = Skill::all();
+        $skillTable = Skill::orderBy('category','desc')->get()->groupBy('category');
         return (
             view('pages.skills', [
                 'skillTable' => $skillTable,
