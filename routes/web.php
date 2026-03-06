@@ -6,6 +6,7 @@ use App\Http\Controllers\SkillController;
 use App\Http\Controllers\ProjectController;
 use App\Http\Controllers\ExperienceController;
 use App\Http\Controllers\ContactController;
+use App\Http\Controllers\PasswordsController;
 /*
 |--------------------------------------------------------------------------
 | Web Routes
@@ -24,7 +25,7 @@ Route::middleware('pageAccess')->group(function () {
     Route::get('/projects', [ProjectController::class, 'project'])->name('project');
     Route::get('/experience', [ExperienceController::class, 'experience'])->name('experience');
     Route::get('/contact', [ContactController::class, 'contact'])->name('contact');
-    Route::get('/passwords', [ContactController::class, 'contact'])->name('passwords');
+    Route::get('/passwords', [PasswordsController::class, 'passwords'])->name('passwords');
 });
 
 Route::get('/linkedin-redirect', function () {

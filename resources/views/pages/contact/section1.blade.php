@@ -16,11 +16,4 @@
             @endif
         @endforeach
     </div>
-        {{-- 
-        <a href="mailto:{{ $contactTable->gmail }}" target="_blank">
-            <img class="project-section1-img-github" src="{{ asset('images/gmail.png') }}" alt="github button"/>
-        </a>
-        <a href="{{ $contactTable->linkedin }}" target="_blank">
-            <img class="project-section1-img-github" src="{{ asset('images/Logo.png') }}" alt="github button"/>
-        </a> --}}
 </div>
