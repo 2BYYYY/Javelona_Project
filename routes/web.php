@@ -20,6 +20,8 @@ use App\Http\Controllers\PasswordsController;
 
 Route::get('/', [ProfileController::class, 'profile'])->name('profile');
 
+Route::resource('experience', [ExperienceController::class, 'experience']);
+
 Route::middleware('pageAccess')->group(function () {
     Route::get('/skills', [SkillController::class, 'skill'])->name('skill');
     Route::get('/projects', [ProjectController::class, 'project'])->name('project');
