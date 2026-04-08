@@ -29,9 +29,7 @@ Route::middleware('pageAccess')->group(function () {
 });
 
 Route::get('/linkedin-redirect', function () {
-
     session(['linkedin_clicked' => true]);
     session()->put('linkedin_clicked_expires', now()->addMinutes(1));
     return redirect('https://www.linkedin.com/in/ignatius-warren-benjamin-javelona-bab7272a4/');
-
 })->name('linkedinClicked');
