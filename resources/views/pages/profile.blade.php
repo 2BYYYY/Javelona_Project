@@ -1,7 +1,7 @@
 @extends('app')
 
 @section('content')
-@if (!session('linkedin_clicked'))
+@if (session('show_linkedin_prompt'))
     <script>
         alert("You need to check out my LinkedIn first! (every 1 min)");
     </script>
